@@ -8,10 +8,12 @@
             <h2><a href="http://www.ikea.com/it/it/">Ikea</a></h1>
         </div>
 
+{% for post in posts %}
         <div>
-            
-        <p>Hi There!</p>
-        <p>It Works!</p>
-        <p>Sono Bea</p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+         </div>
+{% endfor %}
     </body>
 </html>
